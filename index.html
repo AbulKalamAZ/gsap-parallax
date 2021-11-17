@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/main.css" />
+
+    <title>Parallax Effect | GSAP</title>
+  </head>
+  <body>
+    <section class="top-banner">
+      <img src="./images/bg.jpg" alt="background" id="bg" />
+      <h2 id="banner-text">Mountains</h2>
+      <img src="./images/man.png" alt="man" id="man" />
+      <img src="./images/clouds_1.png" alt="clouds_1" id="clouds_1" />
+      <img src="./images/clouds_2.png" alt="clouds_2" id="clouds_2" />
+      <img
+        src="./images/mountain_left.png"
+        alt="mountain_left"
+        id="mountain_left"
+      />
+      <img
+        src="./images/mountain_right.png"
+        alt="mountain_right"
+        id="mountain_right"
+      />
+    </section>
+    <section class="next-section">
+      <h2>This is Next Section</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+        obcaecati repellat veritatis repellendus. Nisi at, aperiam ipsum ipsa
+        animi sit expedita deserunt dolorum eaque officiis, nam officia non odit
+        ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+        obcaecati repellat veritatis repellendus. Nisi at, aperiam ipsum ipsa
+        animi sit expedita deserunt dolorum eaque officiis, nam officia non odit
+        ad! ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+        obcaecati repellat veritatis repellendus. Nisi at, aperiam ipsum ipsa
+        animi sit expedita deserunt dolorum eaque officiis, nam officia non odit
+        ad! ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+        obcaecati repellat veritatis repellendus. Nisi at, aperiam ipsum ipsa
+        animi sit expedita deserunt dolorum eaque officiis, nam officia non odit
+        ad! ad! Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+        obcaecati repellat veritatis repellendus. Nisi at, aperiam ipsum ipsa
+        animi sit expedita deserunt dolorum eaque officiis, nam officia non odit
+        ad! ad! ad! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Labore obcaecati repellat veritatis repellendus. Nisi at, aperiam ipsum
+        ipsa animi sit expedita deserunt dolorum eaque officiis, nam officia non
+        odit ad! ad! ad! Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Labore obcaecati repellat veritatis repellendus. Nisi at, aperiam
+        ipsum ipsa animi sit expedita deserunt dolorum eaque officiis, nam
+        officia non odit ad! ad! ad! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Labore obcaecati repellat veritatis repellendus. Nisi
+        at, aperiam ipsum ipsa animi sit expedita deserunt dolorum eaque
+        officiis, nam officia non odit ad!
+      </p>
+    </section>
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.to("#bg", {
+        scrollTrigger: {
+          scrub: 1,
+        },
+        scale: 1.5,
+      });
+
+      gsap.to("#man", {
+        scrollTrigger: {
+          scrub: 1,
+        },
+        scale: 0.5,
+      });
+
+      gsap.to("#mountain_left", {
+        scrollTrigger: {
+          scrub: 1,
+        },
+        x: -500,
+      });
+
+      gsap.to("#mountain_right", {
+        scrollTrigger: {
+          scrub: 1,
+        },
+        x: 500,
+      });
+
+      gsap.to("#clouds_1", {
+        scrollTrigger: {
+          scrub: 1,
+        },
+        x: 200,
+      });
+
+      gsap.to("#clouds_2", {
+        scrollTrigger: {
+          scrub: 1,
+        },
+        x: -200,
+      });
+
+      gsap.to("#banner-text", {
+        scrollTrigger: {
+          scrub: 1,
+        },
+        y: 500,
+      });
+    </script>
+  </body>
+</html>
